@@ -1,0 +1,12 @@
+diff -Naur Video-Capture-V4l-0.221/RTjpeg/Makefile.PL Video-Capture-V4l-0.221-p/RTjpeg/Makefile.PL
+--- Video-Capture-V4l-0.221/RTjpeg/Makefile.PL	Fri Mar  3 15:55:26 2000
++++ Video-Capture-V4l-0.221-p/RTjpeg/Makefile.PL	Thu Aug 30 19:28:36 2001
+@@ -8,7 +8,7 @@
+ 
+ sub MY::postamble { <<EOF
+ codec/RTjpeg.c: codec/compose.sh
+-	cd codec && . compose.sh
++	cd codec && . ./compose.sh
+ 
+ codec/RTjpeg.o: codec/RTjpeg.c codec/RTjpeg.h
+ 	\$(CCCMD) -o \$@ \$<
