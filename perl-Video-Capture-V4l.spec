@@ -48,7 +48,9 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_sitearch}/auto/Video
 %dir %{perl_sitearch}/auto/Video/*
 %{perl_sitearch}/auto/Video/*/*.bs
+%{perl_sitearch}/auto/Video/*/*/*.bs
 %attr(755,root,root) %{perl_sitearch}/auto/Video/*/*.so
+%attr(755,root,root) %{perl_sitearch}/auto/Video/*/*/*.so
 %{_examplesdir}/%{name}-%{version}
 
 %{_mandir}/man3/*
