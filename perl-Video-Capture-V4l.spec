@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test" (needs working, not busy /dev/audio!)
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Video
-%define		pnam	Capture-V4l
+%define	pdir	Video
+%define	pnam	Capture-V4l
 Summary:	Perl Video::Capture::V4l module
 Summary(pl):	Modu³ Perla Video::Capture::V4l
 Name:		perl-Video-Capture-V4l
