@@ -10,7 +10,7 @@ Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Video/Video-Capture-V4l-%{version}.tar.gz
 Patch0:		%{name}-make.patch
-BuildRequires:	perl-devel > 5.6.1
+BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
