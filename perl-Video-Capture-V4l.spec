@@ -36,21 +36,20 @@ install -d $RPM_BUILD_ROOT/{%{perl_archlib},%{_examplesdir}/%{name}-%{version}}
 
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-gzip -9nf Changes
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes
 %{perl_sitearch}/Video
 %dir %{perl_sitearch}/auto/Video
 %dir %{perl_sitearch}/auto/Video/*
 %{perl_sitearch}/auto/Video/*/*.bs
+%dir %{perl_sitearch}/auto/Video/V4l
+%dir %{perl_sitearch}/auto/Video/VBI
 %{perl_sitearch}/auto/Video/*/*/*.bs
 %attr(755,root,root) %{perl_sitearch}/auto/Video/*/*.so
 %attr(755,root,root) %{perl_sitearch}/auto/Video/*/*/*.so
 %{_examplesdir}/%{name}-%{version}
-
 %{_mandir}/man3/*
