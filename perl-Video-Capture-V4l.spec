@@ -45,9 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/Video
 %dir %{perl_sitearch}/auto/Video
 %dir %{perl_sitearch}/auto/Video/*
+%dir %{perl_sitearch}/auto/Video/Capture/V4l
+%dir %{perl_sitearch}/auto/Video/Capture/VBI
 %{perl_sitearch}/auto/Video/*/*.bs
-%dir %{perl_sitearch}/auto/Video/V4l
-%dir %{perl_sitearch}/auto/Video/VBI
 %{perl_sitearch}/auto/Video/*/*/*.bs
 %attr(755,root,root) %{perl_sitearch}/auto/Video/*/*.so
 %attr(755,root,root) %{perl_sitearch}/auto/Video/*/*/*.so
