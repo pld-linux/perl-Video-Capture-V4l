@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Video
 %define	pnam	Capture-V4l
-%include 	/usr/lib/rpm/macros.perl
 Summary:	Perl Video-Capture-V4l module
 Summary(pl):	Modu³ Perla Video-Capture-V4l
 Name:		perl-Video-Capture-V4l
 Version:	0.221
-Release:	2
-
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -22,7 +21,7 @@ Perl interface to the Video4linux framegrabber interface.
 Perlowy interfejs do urz±dzeñ Video4linux.
 
 %prep
-%setup -q -n Video-Capture-V4l-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch -p1
 
 %build
