@@ -9,7 +9,7 @@ Summary:	Perl Video::Capture::V4l module
 Summary(pl):	Modu³ Perla Video::Capture::V4l
 Name:		perl-Video-Capture-V4l
 Version:	0.222
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
