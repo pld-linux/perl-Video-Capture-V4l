@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_with	tests	# perform "make test" (needs working, not busy /dev/audio!)
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Video
 %define		pnam	Capture-V4l
@@ -30,6 +34,8 @@ Perlowy interfejs do urz±dzeñ Video4linux.
 	INSTALLDIRS=vendor
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
