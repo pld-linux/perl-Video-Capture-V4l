@@ -25,7 +25,7 @@ Perlowy interfejs do urz±dzeñ Video4linux.
 %patch -p1
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
