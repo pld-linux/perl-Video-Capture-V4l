@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Video
-%define	pnam	Capture-V4l
+%define		pdir	Video
+%define		pnam	Capture-V4l
 Summary:	Perl Video::Capture::V4l module
 Summary(pl):	Modu³ Perla Video::Capture::V4l
 Name:		perl-Video-Capture-V4l
@@ -31,7 +31,7 @@ Perlowy interfejs do urz±dzeñ Video4linux.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{%{perl_archlib},%{_examplesdir}/%{name}-%{version}}
+install -d $RPM_BUILD_ROOT{%{perl_archlib},%{_examplesdir}/%{name}-%{version}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
