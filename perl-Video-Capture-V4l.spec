@@ -26,15 +26,17 @@ Perlowy interfejs do urz±dzeñ Video4linux.
 %patch -p1
 
 %build
-%{__perl} Makefile.PL
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{perl_archlib},%{_examplesdir}/%{name}-%{version}}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
-
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
@@ -43,14 +45,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_sitearch}/Video
-%dir %{perl_sitearch}/auto/Video
-%dir %{perl_sitearch}/auto/Video/*
-%dir %{perl_sitearch}/auto/Video/Capture/V4l
-%dir %{perl_sitearch}/auto/Video/Capture/VBI
-%{perl_sitearch}/auto/Video/*/*.bs
-%{perl_sitearch}/auto/Video/*/*/*.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Video/*/*.so
-%attr(755,root,root) %{perl_sitearch}/auto/Video/*/*/*.so
+%{perl_vendorarch}/Video
+%dir %{perl_vendorarch}/auto/Video
+%dir %{perl_vendorarch}/auto/Video/*
+%dir %{perl_vendorarch}/auto/Video/Capture/V4l
+%dir %{perl_vendorarch}/auto/Video/Capture/VBI
+%{perl_vendorarch}/auto/Video/*/*.bs
+%{perl_vendorarch}/auto/Video/*/*/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Video/*/*.so
+%attr(755,root,root) %{perl_vendorarch}/auto/Video/*/*/*.so
 %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
