@@ -6,7 +6,7 @@
 %define		pdir	Video
 %define		pnam	Capture-V4l
 Summary:	Perl Video::Capture::V4l module
-Summary(pl):	Modu³ Perla Video::Capture::V4l
+Summary(pl.UTF-8):   ModuÅ‚ Perla Video::Capture::V4l
 Name:		perl-Video-Capture-V4l
 Version:	0.901
 Release:	1
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Perl interface to the Video4linux framegrabber interface.
 
-%description -l pl
-Perlowy interfejs do urz±dzeñ Video4linux.
+%description -l pl.UTF-8
+Perlowy interfejs do urzÄ…dzeÅ„ Video4linux.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
