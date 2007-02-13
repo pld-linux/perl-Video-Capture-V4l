@@ -6,7 +6,7 @@
 %define		pdir	Video
 %define		pnam	Capture-V4l
 Summary:	Perl Video::Capture::V4l module
-Summary(pl.UTF-8):   Moduł Perla Video::Capture::V4l
+Summary(pl.UTF-8):	Moduł Perla Video::Capture::V4l
 Name:		perl-Video-Capture-V4l
 Version:	0.901
 Release:	1
