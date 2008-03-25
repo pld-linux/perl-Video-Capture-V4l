@@ -5,16 +5,17 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Video
 %define		pnam	Capture-V4l
-Summary:	Perl Video::Capture::V4l module
-Summary(pl.UTF-8):	Moduł Perla Video::Capture::V4l
+Summary:	Video::Capture::V4l - Perl interface to the Video4linux framegrabber interface
+Summary(pl.UTF-8):	Video::Capture::V4l - perlowy interfejs do urządzeń Video4linux
 Name:		perl-Video-Capture-V4l
 Version:	0.901
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Video/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	e3c886e74f06408d5d4933a90feb2ee2
 Patch0:		%{name}-make.patch
+URL:		http://search.cpan.org/dist/Video-Capture-V4l/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -58,8 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Video/Capture/V4l
 %dir %{perl_vendorarch}/auto/Video/Capture/VBI
 %{perl_vendorarch}/auto/Video/*/*.bs
-%{perl_vendorarch}/auto/Video/*/*/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Video/*/*.so
+%{perl_vendorarch}/auto/Video/*/*/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Video/*/*/*.so
 %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
