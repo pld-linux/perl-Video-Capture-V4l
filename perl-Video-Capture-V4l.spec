@@ -58,9 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Video/*
 %dir %{perl_vendorarch}/auto/Video/Capture/V4l
 %dir %{perl_vendorarch}/auto/Video/Capture/VBI
-%{perl_vendorarch}/auto/Video/*/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Video/*/*.so
-%{perl_vendorarch}/auto/Video/*/*/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Video/*/*/*.so
 %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
