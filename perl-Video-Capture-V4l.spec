@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (needs working, not busy /dev/audio!)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Video
 %define		pnam	Capture-V4l
 Summary:	Video::Capture::V4l - Perl interface to the Video4linux framegrabber interface
